@@ -402,7 +402,7 @@ if dein#tap('defx.nvim')
     endfunction
 
     call defx#custom#option('_', {
-	      \ 'columns': 'indent:icons:filename:type',
+	      \ 'columns': 'mark:indent:icons:filename:type',
 	      \ })
 
     " It's weird...
