@@ -5,6 +5,9 @@ if !has('nvim')
   set ttymouse=xterm2
 endif
 
+" enable plugin, indent
+filetype plugin on
+
 "set nowrap
 syntax enable
 
@@ -89,6 +92,9 @@ if dein#load_state(s:dein_dir)
   call dein#add('lighttiger2505/deoplete-vim-lsp')
   call dein#add('Shougo/echodoc.vim')
   call dein#add('jiangmiao/auto-pairs')
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('honza/vim-snippets')
 
   " Linter
   call dein#add('w0rp/ale')
@@ -138,8 +144,8 @@ if dein#load_state(s:dein_dir)
   call dein#add('thinca/vim-quickrun')
   call dein#add('wlangstroth/vim-racket')
   call dein#add('godlygeek/tabular')
-  call dein#add('rcmdnk/vim-markdown')
-  call dein#add('kannokanno/previm')
+  call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
+					\ 'build': 'cd app & npm install' })
   call dein#add('malithsen/trello-vim')
 
   " Colorization
@@ -164,7 +170,6 @@ endif
 
 " Plugin settings {{{
 
-" enable plugin, indent
 filetype plugin indent on
 
 " accelerated-jk
@@ -181,6 +186,7 @@ if dein#tap('ale')
   let g:ale_linters = {
         \   'javascript': ['eslint'],
         \   'python': ['flake8'],
+        \   'cpp': ['g++'],
         \   'go': ['gofmt'],
         \   'swift': ['swiftlint'],
         \}
@@ -208,6 +214,37 @@ if dein#tap('deoplete.nvim')
   set shortmess+=c
   let g:deoplete#enable_at_startup = 1
 endif
+
+
+" neosnippet.vim
+if dein#tap('neosnippet.vim')
+  " Plugin key-mappings.
+  " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+  " SuperTab like snippets behavior.
+  " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+  "imap <expr><TAB>
+  " \ pumvisible() ? "\<C-n>" :
+  " \ neosnippet#expandable_or_jumpable() ?
+  " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+  " For conceal markers.
+  if has('conceal')
+    set conceallevel=2 concealcursor=niv
+  endif
+
+  " Enable snipMate compatibility feature.
+  let g:neosnippet#enable_snipmate_compatibility = 1
+
+  " Tell Neosnippet about the other snippets
+  let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+endif
+
 
 " echodoc.vim
 if dein#tap('echodoc.vim')
@@ -519,10 +556,10 @@ nnoremap <silent><Right> :bn<CR>
 nnoremap <silent><C-Space> :call BufferDeleteExceptFiler()<CR>
 
 " Move with Ctrl+jkhl in insert mode
-imap <C-k> <Up>
-imap <C-j> <Down>
-imap <C-h> <Left>
-imap <C-l> <Right>
+" imap <C-k> <Up>
+" imap <C-j> <Down>
+" imap <C-h> <Left>
+" imap <C-l> <Right>
 
 function! BufferDeleteExceptFiler()
   if (&filetype !=# 'defx')
