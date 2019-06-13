@@ -156,6 +156,7 @@ if dein#load_state(s:dein_dir)
   " Colorscheme
   call dein#add('flazz/vim-colorschemes')
   call dein#add('sff1019/vim-brogrammer-theme')
+  call dein#add('sff1019/vim-joker')
 
   " FZF
   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
@@ -370,7 +371,6 @@ endif
 if dein#tap('vim-airline')
   " let g:airline_theme='murmur'
   let g:airline#extensions#tabline#enabled = 1
-  set laststatus=2
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#fnamemod = ':t'
   let g:airline#extensions#tabline#left_sep = '  '
@@ -484,9 +484,12 @@ endif
 
 if dein#tap('vimtex')
   let g:vimtex_latexmk_enabled = 1
-  let g:tex_flavor='latex'
+  let g:vimtex_quickfix_latexlog = {'default' : 0}
+  let g:vimtex_quickfix_autoclose_after_keystrokes = 1
+  let g:tex_flavor='platex'
   let g:vimtex_compiler_latexmk_engines = { '_' : '-pdfdvi' }
   let g:vimtex_compiler_latexmk = {
+        \ 'backend': 'nvim',
         \ 'background' : 0,
         \ 'build_dir' : '',
         \ 'continuous' : 1,
@@ -585,7 +588,7 @@ set noswapfile
 set clipboard+=unnamedplus
 
 " Colorscheme
-colorscheme brogrammer
+colorscheme joker
 
 " gui configuration
 hi Visual cterm=reverse
