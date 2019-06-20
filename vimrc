@@ -588,7 +588,7 @@ set noswapfile
 set clipboard+=unnamedplus
 
 " Colorscheme
-colorscheme joker
+colorscheme brogrammer
 
 " gui configuration
 hi Visual cterm=reverse
