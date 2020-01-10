@@ -15,6 +15,7 @@ syntax enable
 set expandtab
 set smartindent
 set wildmenu
+set spelllang=en_us spell
 set wildmode=full
 set tabstop=2
 set shiftwidth=2
@@ -147,6 +148,8 @@ if dein#load_state(s:dein_dir)
   call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
 					\ 'build': 'cd app & npm install' })
   call dein#add('malithsen/trello-vim')
+  call dein#add('beckorz/previm', {'rev': 'update-libraries'})
+  call dein#add('daeyun/vim-matlab')
 
   " Colorization
   call dein#add('vim-scripts/AnsiEsc.vim')
@@ -183,6 +186,7 @@ endif
 if dein#tap('ale')
   let g:ale_swift_swiftlint_executable = 'swiftlint'
   let g:ale_swift_swiftlint_options = ''
+  let g:ale_python_autopep8_options = '--max-line-length 100'
 
   let g:ale_linters = {
         \   'javascript': ['eslint'],
@@ -373,10 +377,10 @@ if dein#tap('vim-airline')
   let g:airline#extensions#tabline#enabled = 1
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#fnamemod = ':t'
-  let g:airline#extensions#tabline#left_sep = '  '
+  let g:airline#extensions#tabline#left_sep = "\uE0B0 "
   let g:airline#extensions#tabline#left_alt_sep = ' '
-  let g:airline_left_sep = ' '
-  let g:airline_right_sep = ' '
+  let g:airline_left_sep = "\uE0B0 "
+  let g:airline_right_sep = "\uE0B2"
 endif
 
 " vim-cpp-enhanced-highlight
@@ -477,6 +481,13 @@ if dein#tap('vim-markdown')
   let g:vim_markdown_folding_disabled = 1
 endif
 
+" vim-matlab
+if dein#tap('vim-matlab')
+  let g:matlab_server_split = 'vertical'
+  let g:matlab_auto_mappings = 1
+  let g:matlab_server_launcher = 'tmux'
+endif
+
 " vim-vue
 if dein#tap('vim-vue')
   autocmd FileType vue syntax sync fromstart
@@ -496,6 +507,7 @@ if dein#tap('vimtex')
         \ 'options' : [
         \   '-pdfdvi',
         \   '-verbose',
+        \   '-shell-escape',
         \   '-file-line-error',
         \   '-synctex=1',
         \   '-interaction=nonstopmode',
@@ -594,6 +606,14 @@ colorscheme brogrammer
 hi Visual cterm=reverse
 hi Search cterm=reverse ctermfg=yellow
 hi VertSplit ctermbg=NONE guibg=NONE
+
+" Spell configuration
+hi clear SpellBad
+hi clear SpellCap
+hi clear SpellLocal
+hi SpellBad cterm=underline ctermfg=LightBlue
+hi SpellCap cterm=underline ctermfg=LightBlue
+hi SpellLocal cterm=underline ctermfg=LightBlue
 
 " }}}
 
