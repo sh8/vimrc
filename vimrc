@@ -15,7 +15,6 @@ syntax enable
 set expandtab
 set smartindent
 set wildmenu
-set spelllang=en_us spell
 set wildmode=full
 set tabstop=2
 set shiftwidth=2
@@ -26,6 +25,8 @@ if has('persistent_undo')
   set undofile
   set undolevels=1000
 endif
+autocmd BufRead,BufNewFile *.md spelllang=en_us spell
+autocmd BufRead,BufNewFile *.tex spelllang=en_us spell
 
 " Encode
 set encoding=UTF-8
@@ -516,6 +517,7 @@ if dein#tap('vimtex')
   let g:tex_conceal = ''
   let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
   let g:vimtex_view_general_options = '@line @pdf @tex'
+  let g:vimtex_compiler_progname = 'nvr'
 endif
 
 " vim-trailing-whitespace
