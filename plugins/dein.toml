@@ -2,8 +2,146 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'sheerun/vim-polyglot'
+hook_add = '''
+let g:polyglot_disabled = ['latex']
+'''
+
+[[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'sheerun/vim-polyglot'
+repo = 'Shougo/echodoc.vim'
+hook_add = '''
+  set noshowmode
+  let g:echodoc#type = 'virtual'
+  call echodoc#enable()
+'''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/deoplete.rc.vim
+  call deoplete#enable()
+'''
+
+[[plugins]]
+repo = 'ncm2/float-preview.nvim'
+if = 'has("nvim")'
+hook_add = '''
+  let g:float_preview#docked = 0
+  let g:float_preview#max_width = 300
+  let g:float_preview#max_height = 20
+'''
+
+[[plugins]]
+repo = 'tbodt/deoplete-tabnine'
+build = './install.sh'
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+  let g:lsp_log_file = expand('~/vim-lsp.log')
+  let g:lsp_diagnostics_enabled = 0
+  source ~/.config/nvim/plugins/vim-lsp.rc.vim
+'''
+
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+
+[[plugins]]
+repo = 'sff1019/vim-brogrammer-theme'
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+  let g:ale_completion_enabled = 1
+  let g:ale_swift_swiftlint_executable = 'swiftlint'
+  let g:ale_swift_swiftlint_options = ''
+
+  let g:ale_linters = {
+        \   'javascript': ['eslint'],
+        \   'python': ['flake8'],
+        \   'cpp': ['g++'],
+        \   'go': ['gofmt'],
+        \   'swift': ['swiftlint'],
+        \}
+  let g:ale_fixers = {
+        \   'javascript': ['eslint'],
+        \   'python': ['autopep8'],
+        \   'go': ['gofmt'],
+        \}
+  let g:ale_fix_on_save = 1
+  let g:ale_virtualtext_cursor = 1
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = false
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = '''
+  source ~/.config/nvim/plugins/fzf.rc.vim
+'''
+
+[[plugins]]
+repo = 'lervag/vimtex'
+hook_add = '''
+  source ~/.config/nvim/plugins/vimtex.rc.vim
+'''
+
+[[plugins]]
+repo = 'rhysd/accelerated-jk'
+hook_add = '''
+  nmap j <Plug>(accelerated_jk_gj)
+  nmap k <Plug>(accelerated_jk_gk)
+'''
+
+[[plugins]]
+repo = 'vim-scripts/YankRing.vim'
+hook_add = '''
+  let g:yankring_clipboard_monitor=0
+'''
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#fnamemod = ':t'
+  let g:airline#extensions#tabline#left_sep = '  '
+  let g:airline#extensions#tabline#left_alt_sep = ' '
+  let g:airline_left_sep = ' '
+  let g:airline_right_sep = ' '
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'vim-scripts/AnsiEsc.vim'
+
+[[plugins]]
+repo = 'numirias/semshi'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
