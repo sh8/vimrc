@@ -15,7 +15,7 @@ build = 'make'
 repo = 'Shougo/echodoc.vim'
 hook_add = '''
   set noshowmode
-  let g:echodoc#type = 'virtual'
+  let g:echodoc#type = 'floating'
   call echodoc#enable()
 '''
 
@@ -30,9 +30,15 @@ hook_add = '''
 repo = 'ncm2/float-preview.nvim'
 if = 'has("nvim")'
 hook_add = '''
-  let g:float_preview#docked = 0
-  let g:float_preview#max_width = 300
-  let g:float_preview#max_height = 20
+  let g:float_preview#docked = 1
+
+  function! DisableExtras()
+    call nvim_win_set_option(g:float_preview#win, 'number', v:false)
+    call nvim_win_set_option(g:float_preview#win, 'relativenumber', v:false)
+    call nvim_win_set_option(g:float_preview#win, 'cursorline', v:false)
+  endfunction
+
+  autocmd User FloatPreviewWinOpen call DisableExtras()
 '''
 
 [[plugins]]
@@ -45,7 +51,8 @@ repo = 'prabirshrestha/async.vim'
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 hook_add = '''
-  let g:lsp_log_file = expand('~/vim-lsp.log')
+  let g:lsp_log_file = ''
+  let g:lsp_log_verbose = 1
   let g:lsp_diagnostics_enabled = 0
   source ~/.config/nvim/plugins/vim-lsp.rc.vim
 '''

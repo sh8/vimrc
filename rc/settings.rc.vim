@@ -57,6 +57,7 @@ set clipboard+=unnamedplus
 
 " Colorscheme
 colorscheme brogrammer
+hi Pmenu ctermbg=236
 
 " gui configuration
 hi Visual cterm=reverse

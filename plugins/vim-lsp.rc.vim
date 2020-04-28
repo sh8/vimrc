@@ -1,12 +1,30 @@
+g:lsp_highlight_references_enabled = 1
+
 if executable('pyls')
-  au User lsp_setup call lsp#register_server({
+  call lsp#register_server({
       \ 'name': 'pyls',
-      \ 'cmd': {server_info->['pyls']},
+      \ 'cmd': { server_info -> ['pyls'] },
       \ 'whitelist': ['python'],
       \ 'workspace_config': {'pyls': {'plugins': {
-      \   'pycodestyle': {'enabled': v:false},
-      \   'jedi_definition': {'follow_imports': v:true, 'follow_builtin_imports': v:true},}}}
+      \     'mccabe'              : { 'enabled': v:false },
+      \     'preload'             : { 'enabled': v:false },
+      \     'pycodestyle'         : { 'enabled': v:false },
+      \     'pydocstyle'          : { 'enabled': v:false },
+      \     'pyflakes'            : { 'enabled': v:false },
+      \     'pylint'              : { 'enabled': v:false },
+      \     'rope_completion'     : { 'enabled': v:false },
+      \     'yapf'                : { 'enabled': v:false },
+      \
+      \     'jedi' : {'extra_paths' : [] },
+      \     'jedi_completion'     : { 'enabled': v:true, 'include_params': v:true },
+      \     'jedi_definition'     : { 'enabled': v:true, 'follow_imports': v:true, 'follow_builtin_imports': v:true },
+      \     'jedi_hover'          : { 'enabled': v:true },
+      \     'jedi_references'     : { 'enabled': v:true },
+      \     'jedi_signature_help' : { 'enabled': v:true },
+      \     'jedi_symbols'        : { 'enabled': v:true },
+      \ }}},
       \ })
+  autocmd FileType python setlocal omnifunc=lsp#complete
 endif
 
 if executable('typescript-language-server')

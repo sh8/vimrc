@@ -13,8 +13,10 @@ hook_source = '''
 '''
 
 [[plugins]]
-repo = 'sh8/defx-icons'
-rev = 'AvailableXterm256'
+repo = 'kristijanhusak/defx-icons'
+hook_add = '''
+  let g:defx_icons_enable_syntax_highlight = 1
+'''
 
 [[plugins]]
 repo = 'kristijanhusak/defx-git'

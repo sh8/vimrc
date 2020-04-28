@@ -5,6 +5,8 @@
 let g:python2_host_prog = $HOME . '/.pyenv/shims/python2'
 let g:python3_host_prog = $HOME . '/.pyenv/shims/python3'
 
+set completeopt-=preview
+
 " <TAB>: completion.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
