@@ -14,9 +14,6 @@ hook_source = '''
 
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
-hook_add = '''
-  let g:defx_icons_enable_syntax_highlight = 1
-'''
 
 [[plugins]]
 repo = 'kristijanhusak/defx-git'
