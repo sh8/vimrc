@@ -57,11 +57,11 @@ set clipboard+=unnamedplus
 
 " Colorscheme
 colorscheme brogrammer
-hi Pmenu ctermbg=236
 
 " gui configuration
 hi Visual cterm=reverse
 hi Search cterm=reverse ctermfg=yellow
 hi VertSplit ctermbg=NONE guibg=NONE
+hi Pmenu ctermbg=236 guibg=NONE
 
 " }}}
