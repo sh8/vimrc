@@ -55,13 +55,20 @@ set noswapfile
 " Set clipboard
 set clipboard+=unnamedplus
 
+function! MyHighlights() abort
+  " gui configuration
+  hi Visual cterm=reverse
+  hi Search cterm=reverse ctermfg=yellow
+  hi VertSplit ctermbg=NONE guibg=NONE
+  hi Pmenu ctermbg=235 guibg=NONE
+endfunction
+
+augroup MyColors
+  autocmd!
+  autocmd ColorScheme * call MyHighlights()
+augroup END
+
 " Colorscheme
 colorscheme brogrammer
-
-" gui configuration
-hi Visual cterm=reverse
-hi Search cterm=reverse ctermfg=yellow
-hi VertSplit ctermbg=NONE guibg=NONE
-hi Pmenu ctermbg=236 guibg=NONE
 
 " }}}
