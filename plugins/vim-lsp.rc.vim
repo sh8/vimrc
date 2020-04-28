@@ -1,5 +1,3 @@
-g:lsp_highlight_references_enabled = 1
-
 if executable('pyls')
   call lsp#register_server({
       \ 'name': 'pyls',
