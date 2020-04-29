@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/iwaseshun/dev/plugins/vimrc/rc'
+let g:netrw_dirhist_3='/Users/iwaseshun/dev/plugins/vimrc'
+let g:netrw_dirhist_2='/Users/iwaseshun/dev/plugins/vimrc/rc'
+let g:netrw_dirhist_1='/Users/iwaseshun/dev/plugins/vimrc'
