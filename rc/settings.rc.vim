@@ -55,6 +55,8 @@ set noswapfile
 " Set clipboard
 set clipboard+=unnamedplus
 
+let loaded_netrwPlugin = 1
+
 function! MyHighlights() abort
   " gui configuration
   hi Visual cterm=reverse
