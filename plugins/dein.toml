@@ -23,7 +23,7 @@ hook_add = '''
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   source ~/.config/nvim/plugins/deoplete.rc.vim
-  call deoplete#enable()
+  let g:deoplete#enable_at_startup = 1
 '''
 
 [[plugins]]

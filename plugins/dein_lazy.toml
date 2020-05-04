@@ -24,10 +24,6 @@ defx= '''
 '''
 
 [[plugins]]
-repo = 'jiangmiao/auto-pairs'
-on_event = 'InsertEnter'
-
-[[plugins]]
 repo = 'Shougo/neosnippet.vim'
 depends = 'neosnippet-snippets'
 on_event = 'InsertCharPre'
