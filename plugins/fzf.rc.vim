@@ -2,12 +2,12 @@ command! -bang -nargs=* Rg
       \ call fzf#vim#grep(
       \   'rg -g "!node_modules/*" --column --line-number  --no-heading --color=always '.shellescape(<q-args>), 0,
       \   fzf#vim#with_preview(
-      \      {'options': '--exact --delimiter : --nth 3.. --preview "rougify {2..-1} | head -'.&lines.'"'}, 'right:50%'))
+      \      {'options': '--exact --delimiter : --nth 3.. --preview "bat --color=always {} | head -'.&lines.'"'}, 'right:50%'))
 nnoremap <silent> <C-t> :call Fzf_dev()<CR>
 nnoremap ,g :Rg<CR>
 
 function! Fzf_dev()
-  let l:fzf_files_options = '--preview "rougify {2..-1} | head -'.&lines.'"'
+  let l:fzf_files_options = '--preview "bat -n --color=always {2..-1} | head -'.&lines.'"'
 
   function! s:files()
     let l:files = split(system($FZF_DEFAULT_COMMAND), '\n')
