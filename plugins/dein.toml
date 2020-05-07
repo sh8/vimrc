@@ -141,3 +141,10 @@ repo = 'previm/previm'
 hook_add = '''
   let g:previm_open_cmd = 'open -a Google\ Chrome'
 '''
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+# hook_add = '''
+#   let g:AutoPairsMapCR=0
+#   imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>\<Plug>AutoPairsReturn"
+# '''
