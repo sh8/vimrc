@@ -144,7 +144,3 @@ hook_add = '''
 
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
-# hook_add = '''
-#   let g:AutoPairsMapCR=0
-#   imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>\<Plug>AutoPairsReturn"
-# '''
