@@ -11,7 +11,7 @@ let g:ale_linters = {
       \}
 let g:ale_fixers = {
       \   'javascript': ['eslint'],
-      \   'python': ['autopep8'],
+      \   'python': ['yapf'],
       \   'go': ['gofmt'],
       \}
 let g:ale_fix_on_save = 1
