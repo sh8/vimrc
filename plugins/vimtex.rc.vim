@@ -1,3 +1,4 @@
+let g:vimtex_compiler_progname = 'nvr'
 let g:vimtex_latexmk_enabled = 1
 let g:vimtex_quickfix_latexlog = {'default' : 0}
 let g:vimtex_quickfix_autoclose_after_keystrokes = 1

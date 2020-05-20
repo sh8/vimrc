@@ -4,7 +4,7 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
 hook_add = '''
-let g:polyglot_disabled = ['markdown', 'latex']
+let g:polyglot_disabled = ['markdown']
 '''
 
 [[plugins]]
@@ -82,12 +82,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'lervag/vimtex'
-hook_add = '''
-  source ~/.config/nvim/plugins/vimtex.rc.vim
-'''
-
-[[plugins]]
 repo = 'rhysd/accelerated-jk'
 hook_add = '''
   nmap j <Plug>(accelerated_jk_gj)
@@ -144,3 +138,10 @@ hook_add = '''
 
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'lervag/vimtex'
+hook_add = '''
+  source ~/.config/nvim/plugins/vimtex.rc.vim
+'''
+

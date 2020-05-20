@@ -64,7 +64,6 @@ call deoplete#custom#source('tabnine', 'converters', [
 
 call deoplete#custom#option('keyword_patterns', {
       \ '_': '[a-zA-Z_]\k*\(?',
-      \ 'tex': '[^\w|\s][a-zA-Z_]\w*',
       \ })
 
 call deoplete#custom#option({
