@@ -4,7 +4,23 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
 hook_add = '''
-let g:polyglot_disabled = ['markdown']
+let g:polyglot_disabled = ['markdown', 'cuda']
+'''
+
+[[plugins]]
+repo = 'bfrg/vim-cuda-syntax'
+hook_add = '''
+" Highlight keywords from CUDA Runtime API
+let g:cuda_runtime_api_highlight = 1
+
+" Highlight keywords from CUDA Driver API
+let g:cuda_driver_api_highlight = 1
+
+" Highlight keywords from CUDA Thrust library
+let g:cuda_thrust_highlight = 1
+
+" Disable highlighting of CUDA kernel calls
+let g:cuda_no_kernel_highlight = 1
 '''
 
 [[plugins]]
@@ -40,10 +56,6 @@ hook_add = '''
 
   autocmd User FloatPreviewWinOpen call DisableExtras()
 '''
-
-[[plugins]]
-repo = 'tbodt/deoplete-tabnine'
-build = './install.sh'
 
 [[plugins]]
 repo = 'prabirshrestha/async.vim'
