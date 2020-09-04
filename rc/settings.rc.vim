@@ -63,6 +63,11 @@ function! MyHighlights() abort
   hi Search cterm=reverse ctermfg=yellow
   hi VertSplit ctermbg=NONE guibg=NONE
   hi Pmenu ctermbg=235 guibg=NONE
+  hi Normal ctermbg=NONE guibg=NONE
+  hi NonText ctermbg=NONE guibg=NONE
+  hi LineNr ctermbg=NONE guibg=NONE
+  hi Folded ctermbg=NONE guibg=NONE
+  hi EndOfBuffer ctermbg=NONE guibg=NONE
 endfunction
 
 augroup MyColors
