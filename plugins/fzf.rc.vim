@@ -35,5 +35,5 @@ function! Fzf_dev()
         \ 'source': <sid>files(),
         \ 'sink':   function('s:edit_file'),
         \ 'options': '-m ' . l:fzf_files_options,
-        \ 'down':    '40%' })
+        \ 'window': { 'width': 0.9, 'height': 0.6, 'border': 'rounded' }})
 endfunction
