@@ -1,3 +1,3 @@
 # vimrc
 
-ofds
+My private vimrc
