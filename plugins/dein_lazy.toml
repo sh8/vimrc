@@ -8,7 +8,7 @@ hook_add = '''
 '''
 hook_source = '''
   call defx#custom#option('_', {
-      \ 'columns': 'mark:indent:icons:filename:type',
+      \ 'columns': 'indent:git:icons:filename:type',
       \ })
 '''
 

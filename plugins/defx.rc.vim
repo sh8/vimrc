@@ -47,3 +47,15 @@ nnoremap <silent><buffer><expr> <C-g>
   \ defx#do_action('print')
 nnoremap <silent><buffer><expr> cd
   \ defx#do_action('change_vim_cwd')
+
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : '✹',
+  \ 'Staged'    : '✚',
+  \ 'Untracked' : '✭',
+  \ 'Renamed'   : '➜',
+  \ 'Unmerged'  : '═',
+  \ 'Ignored'   : '☒',
+  \ 'Deleted'   : '✖',
+  \ 'Unknown'   : '?'
+  \ })
+
