@@ -145,7 +145,7 @@ repo = 'editorconfig/editorconfig-vim'
 [[plugins]]
 repo = 'previm/previm'
 hook_add = '''
-  let g:previm_open_cmd = 'open -a Google\ Chrome'
+  let g:previm_open_cmd = 'google-chrome-stable'
 '''
 
 [[plugins]]
@@ -155,4 +155,12 @@ repo = 'jiangmiao/auto-pairs'
 repo = 'lervag/vimtex'
 hook_add = '''
   source ~/.config/nvim/plugins/vimtex.rc.vim
+'''
+
+[[plugins]]
+repo = 'daeyun/vim-matlab'
+hook_add = '''
+  let g:matlab_auto_mappings = 1 "automatic mappings enabled
+  let g:matlab_server_launcher = 'tmux'
+  let g:matlab_server_split = 'vertical'
 '''
