@@ -68,6 +68,7 @@ function! MyHighlights() abort
   hi LineNr ctermbg=NONE guibg=NONE
   hi Folded ctermbg=NONE guibg=NONE
   hi EndOfBuffer ctermbg=NONE guibg=NONE
+  hi ALEError ctermbg=12 guibg=NONE
 endfunction
 
 augroup MyColors

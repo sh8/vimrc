@@ -4,7 +4,7 @@ depends = ['defx-icons', 'defx-git']
 hook_add = '''
   map <silent> <C-\>
     \ :Defx -toggle -split=vertical
-    \ -winwidth=30 -direction=topleft -resume<CR>
+    \ -winwidth=40 -direction=topleft -resume<CR>
 '''
 hook_source = '''
   call defx#custom#option('_', {
