@@ -22,4 +22,4 @@ let g:vimtex_compiler_latexmk = {
 let g:tex_conceal = ''
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_syntax_enable = 0
-let g:vimtex_syntax_conceal_default = 0
+let g:vimtex_syntax_conceal_disable = 1
