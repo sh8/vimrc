@@ -3,7 +3,7 @@ repo = 'Shougo/defx.nvim'
 depends = ['defx-icons', 'defx-git']
 hook_add = '''
   map <silent> <C-\>
-    \ :Defx -toggle -split=vertical
+    \ :Defx -toggle -split=vertical -ignored-files=.*,Session.vim
     \ -winwidth=30 -direction=topleft -resume<CR>
 '''
 hook_source = '''

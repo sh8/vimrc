@@ -112,8 +112,8 @@ repo = 'tomtom/tcomment_vim'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 
-[[plugins]]
-repo = 'tpope/vim-fugitive'
+# [[plugins]]
+# repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
@@ -164,3 +164,6 @@ hook_add = '''
   let g:matlab_server_launcher = 'tmux'
   let g:matlab_server_split = 'vertical'
 '''
+
+[[plugins]]
+repo = 'rmagatti/auto-session'
