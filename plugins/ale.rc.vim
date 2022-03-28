@@ -1,6 +1,4 @@
 let g:ale_completion_enabled = 1
-let g:ale_swift_swiftlint_executable = 'swiftlint'
-let g:ale_swift_swiftlint_options = ''
 
 let g:ale_linters = {
       \   'javascript': ['eslint'],
