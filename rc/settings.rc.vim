@@ -53,28 +53,9 @@ set hidden
 set noswapfile
 
 " Set clipboard
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
 
 let loaded_netrwPlugin = 1
-
-function! MyHighlights() abort
-  " gui configuration
-  hi Visual cterm=reverse
-  hi Search cterm=reverse ctermfg=yellow
-  hi VertSplit ctermbg=NONE guibg=NONE
-  hi Pmenu ctermbg=235 guibg=NONE
-  hi Normal ctermbg=NONE guibg=NONE
-  hi NonText ctermbg=NONE guibg=NONE
-  hi LineNr ctermbg=NONE guibg=NONE
-  hi Folded ctermbg=NONE guibg=NONE
-  hi EndOfBuffer ctermbg=NONE guibg=NONE
-  hi ALEError ctermbg=9 guibg=NONE
-endfunction
-
-augroup MyColors
-  autocmd!
-  autocmd ColorScheme * call MyHighlights()
-augroup END
 
 " Colorscheme
 colorscheme brogrammer
