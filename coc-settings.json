@@ -1,0 +1,40 @@
+{
+  "codeLens.enable": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.willSaveHandlerTimeout": 1000,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "yaml"
+  ],
+  "coc.source.around.firstMatch": false,
+  "coc.source.file.ignoreHidden": false,
+  "git.addGBlameToVirtualText": false,
+  "git.semanticCommit.scope": false,
+  "list.normalMappings": {
+    "<C-c>": "do:exit"
+  },
+  "list.insertMappings": {
+    "<C-c>": "do:exit"
+  },
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfArgs": ["--style google"],
+  "python.linting.enabled": false,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.linting.pylintEnabled": true,
+  "pyright.trace.server": "verbose",
+  "signature.target": "echo",
+  "suggest.floatConfig": {
+    "border": true,
+    "winblend": 3,
+    "borderhighlight": "FloatBorder",
+    "shadow": true,
+  },
+  "suggest.detailField": "abbr",
+  "suggest.timeout": 5000,
+  "suggest.triggerCompletionWait": 30,
+  "suggest.defaultSortMethod": "none",
+  "suggest.noselect": false,
+  "suggest.enablePreselect": true,
+  "languageserver": {}
+}

@@ -57,7 +57,19 @@ set noswapfile
 
 let loaded_netrwPlugin = 1
 
+function! MyHighlights() abort
+  " gui configuration
+  hi CocPumSearch ctermfg=29
+  hi CocFloating ctermbg=233
+endfunction
+
+augroup MyColors
+  autocmd!
+  autocmd ColorScheme * call MyHighlights()
+augroup END
+
 " Colorscheme
 colorscheme brogrammer
 
 " }}}
+

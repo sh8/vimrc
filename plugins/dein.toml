@@ -43,7 +43,6 @@ repo = 'neoclide/coc.nvim'
 merged = '0'
 rev = 'release'
 hook_add = """
-  let g:coc_global_config="$HOME/.config/nvim/plugins/coc-settings.json"
   source $HOME/.config/nvim/plugins/coc.rc.vim
 """
 

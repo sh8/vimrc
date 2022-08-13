@@ -20,5 +20,3 @@ nmap <silent> gr <Plug>(coc-references)
 
 " #649: Some LSPs have issues with backup files
 set nobackup
-
-hi CocPumSearch ctermfg=29
