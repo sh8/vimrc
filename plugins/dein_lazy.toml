@@ -3,8 +3,8 @@ repo = 'Shougo/defx.nvim'
 depends = ['defx-icons', 'defx-git']
 hook_add = '''
   map <silent> <C-\>
-    \ :Defx -toggle -split=vertical
-    \ -winwidth=40 -direction=topleft -resume<CR>
+    \ :Defx -toggle -split=vertical -ignored-files=.*,Session.vim
+    \ -winwidth=30 -direction=topleft -resume<CR>
 '''
 hook_source = '''
   call defx#custom#option('_', {
@@ -23,14 +23,14 @@ defx= '''
   source ~/.config/nvim/plugins/defx.rc.vim
 '''
 
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-depends = 'neosnippet-snippets'
-on_event = 'InsertCharPre'
-on_ft = 'snippet'
-hook_add = '''
-  source ~/.config/nvim/plugins/neosnippet.rc.vim
-'''
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+# [[plugins]]
+# repo = 'Shougo/neosnippet.vim'
+# depends = 'neosnippet-snippets'
+# on_event = 'InsertCharPre'
+# on_ft = 'snippet'
+# hook_add = '''
+#   source ~/.config/nvim/plugins/neosnippet.rc.vim
+# '''
+#
+# [[plugins]]
+# repo = 'Shougo/neosnippet-snippets'

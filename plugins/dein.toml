@@ -24,25 +24,6 @@ let g:cuda_no_kernel_highlight = 1
 '''
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
-[[plugins]]
-repo = 'Shougo/echodoc.vim'
-hook_add = '''
-  set noshowmode
-  let g:echodoc#type = 'floating'
-  call echodoc#enable()
-'''
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-  source ~/.config/nvim/plugins/deoplete.rc.vim
-  let g:deoplete#enable_at_startup = 1
-'''
-
-[[plugins]]
 repo = 'ncm2/float-preview.nvim'
 if = 'has("nvim")'
 hook_add = '''
@@ -58,28 +39,15 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'prabirshrestha/async.vim'
-
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-hook_add = '''
-  let g:lsp_log_file = ''
-  let g:lsp_log_verbose = 1
-  let g:lsp_diagnostics_enabled = 0
-  source ~/.config/nvim/plugins/vim-lsp.rc.vim
-'''
-
-[[plugins]]
-repo = 'lighttiger2505/deoplete-vim-lsp'
+repo = 'neoclide/coc.nvim'
+merged = '0'
+rev = 'release'
+hook_add = """
+  source $HOME/.config/nvim/plugins/coc.rc.vim
+"""
 
 [[plugins]]
 repo = 'sff1019/vim-brogrammer-theme'
-
-[[plugins]]
-repo = 'w0rp/ale'
-hook_add = '''
-  source ~/.config/nvim/plugins/ale.rc.vim
-'''
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -108,12 +76,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
@@ -145,7 +107,7 @@ repo = 'editorconfig/editorconfig-vim'
 [[plugins]]
 repo = 'previm/previm'
 hook_add = '''
-  let g:previm_open_cmd = 'open -a Google\ Chrome'
+  let g:previm_open_cmd = 'google-chrome-stable'
 '''
 
 [[plugins]]
@@ -156,3 +118,6 @@ repo = 'lervag/vimtex'
 hook_add = '''
   source ~/.config/nvim/plugins/vimtex.rc.vim
 '''
+
+[[plugins]]
+repo = 'rmagatti/auto-session'
