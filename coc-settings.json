@@ -27,9 +27,10 @@
   "suggest.floatConfig": {
     "border": true,
     "winblend": 3,
-    "borderhighlight": "FloatBorder",
-    "shadow": true,
+    "borderhighlight": "CocFloatConfig"
   },
+  "highlight.colors.enable": true,
+  "colors.filetypes": ["vim"],
   "suggest.detailField": "abbr",
   "suggest.timeout": 5000,
   "suggest.triggerCompletionWait": 30,

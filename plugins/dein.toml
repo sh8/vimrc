@@ -2,12 +2,6 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'sheerun/vim-polyglot'
-hook_add = '''
-let g:polyglot_disabled = ['markdown', 'cuda']
-'''
-
-[[plugins]]
 repo = 'bfrg/vim-cuda-syntax'
 hook_add = '''
 " Highlight keywords from CUDA Runtime API
@@ -40,10 +34,11 @@ hook_add = '''
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-merged = '0'
-rev = 'release'
+rev = 'master'
+build = 'yarn install --frozen-lockfile'
+merged = false
 hook_add = """
-  source $HOME/.config/nvim/plugins/coc.rc.vim
+  source ~/.config/nvim/plugins/coc.rc.vim
 """
 
 [[plugins]]
@@ -105,19 +100,7 @@ repo = 'sh8/semshi'
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
-repo = 'previm/previm'
-hook_add = '''
-  let g:previm_open_cmd = 'google-chrome-stable'
-'''
-
-[[plugins]]
 repo = 'jiangmiao/auto-pairs'
-
-[[plugins]]
-repo = 'lervag/vimtex'
-hook_add = '''
-  source ~/.config/nvim/plugins/vimtex.rc.vim
-'''
 
 [[plugins]]
 repo = 'rmagatti/auto-session'

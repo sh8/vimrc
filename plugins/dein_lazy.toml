@@ -22,15 +22,3 @@ repo = 'kristijanhusak/defx-git'
 defx= '''
   source ~/.config/nvim/plugins/defx.rc.vim
 '''
-
-# [[plugins]]
-# repo = 'Shougo/neosnippet.vim'
-# depends = 'neosnippet-snippets'
-# on_event = 'InsertCharPre'
-# on_ft = 'snippet'
-# hook_add = '''
-#   source ~/.config/nvim/plugins/neosnippet.rc.vim
-# '''
-#
-# [[plugins]]
-# repo = 'Shougo/neosnippet-snippets'

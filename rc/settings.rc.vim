@@ -8,6 +8,7 @@ endif
 " Encode
 set encoding=UTF-8
 set shortmess+=c
+set termguicolors
 
 " Set statusline
 set laststatus=2
@@ -59,8 +60,9 @@ let loaded_netrwPlugin = 1
 
 function! MyHighlights() abort
   " gui configuration
-  hi CocPumSearch ctermfg=29
-  hi CocFloating ctermbg=233
+  hi CocPumSearch ctermfg=29 guifg=#00875f
+  hi CocFloating ctermbg=233 guibg=#2f383e
+  hi CocFloatBorder ctermfg=29 guifg=#00875f
 endfunction
 
 augroup MyColors
