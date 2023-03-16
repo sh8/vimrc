@@ -11,4 +11,5 @@ au Filetype html setlocal ts=2 sts=2 sw=2
 au Filetype ruby setlocal ts=2 sts=2 sw=2 et
 au Filetype css setlocal ts=4 sw=4 sts=0
 au FileType javascript setlocal ts=2 sw=2 et
+au Filetype cpp setlocal ts=4 sw=4 sts=4
 " }}}

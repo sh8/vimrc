@@ -1,4 +1,5 @@
 let g:coc_global_extensions = [
+      \ 'coc-clangd',
       \ 'coc-pyright',
       \ 'coc-toml',
       \ 'coc-yaml',
@@ -6,7 +7,7 @@ let g:coc_global_extensions = [
       \ 'coc-yank',
       \ 'coc-prettier',
       \ 'coc-highlight',
-      \ 'coc-git'
+      \ 'coc-git',
       \]
 
 set runtimepath^=~/.src/coc-pyright
