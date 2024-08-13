@@ -7,7 +7,6 @@
     "python",
     "yaml"
   ],
-  "coc.source.around.firstMatch": false,
   "coc.source.file.ignoreHidden": false,
   "git.addGBlameToVirtualText": false,
   "git.semanticCommit.scope": false,
@@ -23,7 +22,6 @@
   "python.analysis.diagnosticMode": "workspace",
   "python.linting.pylintEnabled": true,
   "pyright.trace.server": "verbose",
-  "signature.target": "echo",
   "suggest.detailField": "abbr",
   "suggest.timeout": 5000,
   "suggest.triggerCompletionWait": 30,
