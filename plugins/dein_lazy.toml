@@ -1,24 +1,24 @@
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-depends = ['defx-icons', 'defx-git']
-hook_add = '''
-  map <silent> <C-\>
-    \ :Defx -toggle -split=vertical -ignored-files=.*,Session.vim
-    \ -winwidth=30 -direction=topleft -resume<CR>
-'''
-hook_source = '''
-  call defx#custom#option('_', {
-      \ 'columns': 'git:icons:indent:filename:type',
-      \ })
-'''
+# [[plugins]]
+# repo = 'Shougo/defx.nvim'
+# depends = ['defx-icons', 'defx-git']
+# hook_add = '''
+#   map <silent> <C-\>
+#     \ :Defx -toggle -split=vertical -ignored-files=.*,Session.vim
+#     \ -winwidth=30 -direction=topleft -resume<CR>
+# '''
+# hook_source = '''
+#   call defx#custom#option('_', {
+#       \ 'columns': 'git:icons:indent:filename:type',
+#       \ })
+# '''
+#
+# [[plugins]]
+# repo = 'kristijanhusak/defx-icons'
+#
+# [[plugins]]
+# repo = 'kristijanhusak/defx-git'
 
-[[plugins]]
-repo = 'kristijanhusak/defx-icons'
-
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
-
-[plugins.ftplugin]
-defx= '''
-  source ~/.config/nvim/plugins/defx.rc.vim
-'''
+# [plugins.ftplugin]
+# defx= '''
+#   source ~/.config/nvim/plugins/defx.rc.vim
+# '''

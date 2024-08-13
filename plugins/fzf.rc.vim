@@ -1,8 +1,3 @@
-command! -bang -nargs=* Rg
-      \ call fzf#vim#grep(
-      \   'rg -g "!node_modules/*" --column --line-number  --no-heading --color=always '.shellescape(<q-args>), 0,
-      \   fzf#vim#with_preview(
-      \      {'options': '--exact --delimiter : --nth 3.. --preview "bat --color=always {} | head -'.&lines.'"'}, 'right:50%'))
 nnoremap <silent> <C-t> :call Fzf_dev()<CR>
 nnoremap ,g :Rg<CR>
 

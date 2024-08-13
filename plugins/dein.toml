@@ -104,3 +104,12 @@ repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'rmagatti/auto-session'
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'mikavilpas/yazi.nvim'
+hook_add = '''
+map <silent> <C-\> :lua require("yazi").yazi()<CR>
+'''
