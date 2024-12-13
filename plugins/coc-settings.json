@@ -16,8 +16,7 @@
   "list.insertMappings": {
     "<C-c>": "do:exit"
   },
-  "python.formatting.provider": "yapf",
-  "python.formatting.yapfArgs": ["--style google"],
+  "python.formatting.provider": "black",
   "python.linting.enabled": false,
   "python.analysis.diagnosticMode": "workspace",
   "python.linting.pylintEnabled": true,

@@ -94,7 +94,7 @@ repo = 'vim-airline/vim-airline-themes'
 repo = 'vim-scripts/AnsiEsc.vim'
 
 [[plugins]]
-repo = 'sh8/semshi'
+repo = 'numirias/semshi'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
@@ -104,6 +104,14 @@ repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'rmagatti/auto-session'
+on_lua = 'auto-session'
+hook_add = '''
+lua <<END
+require('auto-session').setup({
+  enabled = true
+})
+END
+'''
 
 [[plugins]]
 repo = 'nvim-lua/plenary.nvim'
