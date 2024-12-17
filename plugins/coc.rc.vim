@@ -5,12 +5,11 @@ let g:coc_global_extensions = [
       \ 'coc-yaml',
       \ 'coc-gitignore',
       \ 'coc-yank',
-      \ 'coc-prettier',
       \ 'coc-highlight',
       \ 'coc-git',
       \]
 
-set runtimepath^=~/.src/coc-pyright
+" set runtimepath^=~/.src/coc-pyright
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
 let g:coc_node_path='/home/shuniwase/.nvm/versions/node/v18.16.0/bin/node'
