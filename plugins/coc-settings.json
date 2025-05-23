@@ -16,8 +16,11 @@
   "list.insertMappings": {
     "<C-c>": "do:exit"
   },
-  "python.formatting.provider": "black",
-  "python.linting.enabled": false,
+  "python.formatting.provider": "ruff",
+  "python.linting.enabled": true,
+  "pyright.inlayHints.functionReturnTypes": false,
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.parameterTypes": false,
   "python.analysis.diagnosticMode": "workspace",
   "python.linting.pylintEnabled": true,
   "pyright.trace.server": "verbose",

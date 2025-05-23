@@ -39,7 +39,7 @@ set hlsearch
 " Fastest way to move buffer
 nnoremap <silent><Left> :bp<CR>
 nnoremap <silent><Right> :bn<CR>
-nnoremap <silent><C-Space> :call BufferDeleteExceptFiler()<CR>
+nnoremap <silent><C-Space> :Bdelete<CR>
 
 function! BufferDeleteExceptFiler()
   if (&filetype !=# 'defx')
@@ -72,6 +72,20 @@ augroup END
 
 " Colorscheme
 colorscheme brogrammer
+
+lua <<EOF
+  require('render-markdown').setup({
+    file_types = { "markdown", "Avante" },
+  })
+  require('avante').setup({
+    claude = {
+      endpoint = "https://api.anthropic.com",
+      model = "claude-sonnet-4-20250514",
+      temperature = 0,
+      max_tokens = 4096,
+    },
+  })
+EOF
 
 " }}}
 

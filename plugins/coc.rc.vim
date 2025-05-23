@@ -1,5 +1,6 @@
 let g:coc_global_extensions = [
       \ 'coc-clangd',
+      \ '@yaegassy/coc-ruff',
       \ 'coc-pyright',
       \ 'coc-toml',
       \ 'coc-yaml',
@@ -9,10 +10,9 @@ let g:coc_global_extensions = [
       \ 'coc-git',
       \]
 
-" set runtimepath^=~/.src/coc-pyright
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
-let g:coc_node_path='/home/shuniwase/.nvm/versions/node/v18.16.0/bin/node'
+let g:coc_node_path='/Users/shun/.nvm/versions/node/v22.15.0/bin/node'
 
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
 

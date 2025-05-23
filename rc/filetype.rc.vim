@@ -4,6 +4,7 @@ au BufNewFile,BufRead *.ts set filetype=typescript
 au BufNewFile,BufRead *.tsx set filetype=typescript
 au BufNewFile,BufRead *.toml set filetype=toml
 au BufNewFile,BufRead *.m set filetype=matlab
+au BufNewFile,BufRead Avante set filetype=markdown
 "}}}
 
 " Indentation settings {{{
