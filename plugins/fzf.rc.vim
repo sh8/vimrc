@@ -1,5 +1,5 @@
 nnoremap <silent> <C-t> :call Fzf_dev()<CR>
-nnoremap ,g :Rg<CR>
+nnoremap ,g :RG<CR>
 
 function! Fzf_dev()
   let l:fzf_files_options = '--preview "bat -n --color=always {2..-1} | head -'.&lines.'"'
