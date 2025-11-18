@@ -1,0 +1,24 @@
+{
+  "codeLens.enable": true,
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.willSaveHandlerTimeout": 1000,
+  "coc.preferences.formatOnSave": true,
+  "coc.source.file.ignoreHidden": false,
+  "git.addGBlameToVirtualText": false,
+  "git.semanticCommit.scope": false,
+  "list.normalMappings": {
+    "<C-c>": "do:exit"
+  },
+  "list.insertMappings": {
+    "<C-c>": "do:exit"
+  },
+  "basedpyright.analysis.autoImportCompletions": true,
+  "basedpyright.analysis.inlayHints.functionReturnTypes": false,
+  "basedpyright.analysis.inlayHints.variableTypes": false,
+  "suggest.detailField": "abbr",
+  "suggest.timeout": 5000,
+  "suggest.triggerCompletionWait": 10,
+  "suggest.defaultSortMethod": "none",
+  "suggest.noselect": false,
+  "suggest.enablePreselect": true
+}
