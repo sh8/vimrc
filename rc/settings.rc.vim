@@ -70,6 +70,12 @@ augroup MyColors
   autocmd ColorScheme * call MyHighlights()
 augroup END
 
+" Auto organize imports with ruff on save
+augroup RuffOrganizeImports
+  autocmd!
+  autocmd BufWritePre *.py silent! :CocCommand ruff.executeOrganizeImports
+augroup END
+
 " Colorscheme
 colorscheme brogrammer
 
