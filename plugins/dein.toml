@@ -98,9 +98,6 @@ repo = 'vim-airline/vim-airline-themes'
 repo = 'vim-scripts/AnsiEsc.vim'
 
 [[plugins]]
-repo = 'numirias/semshi'
-
-[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
@@ -135,6 +132,14 @@ hook_add = '''
 
 [[plugins]]
 repo='nvim-treesitter/nvim-treesitter'
+hook_add='''
+lua <<END
+require('nvim-treesitter.configs').setup({
+  ensure_installed = { 'python' },
+  highlight = { enable = true },
+})
+END
+'''
 
 [[plugins]]
 repo='stevearc/dressing.nvim'
