@@ -56,9 +56,6 @@ merged = false
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
-hook_add = '''
-  source ~/.config/nvim/plugins/fzf.rc.vim
-'''
 
 [[plugins]]
 repo = 'rhysd/accelerated-jk'
@@ -131,8 +128,8 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo='nvim-treesitter/nvim-treesitter'
-hook_add='''
+repo = 'nvim-treesitter/nvim-treesitter'
+hook_add = '''
 lua <<END
 require('nvim-treesitter.configs').setup({
   ensure_installed = { 'python' },
@@ -142,21 +139,16 @@ END
 '''
 
 [[plugins]]
-repo='stevearc/dressing.nvim'
+repo = 'stevearc/dressing.nvim'
 
 [[plugins]]
-repo='MunifTanjim/nui.nvim'
-hook_add='''
+repo = 'MunifTanjim/nui.nvim'
+hook_add = '''
   lua require('nui').load()
 '''
 
 [[plugins]]
-repo='MeanderingProgrammer/render-markdown.nvim'
+repo = 'MeanderingProgrammer/render-markdown.nvim'
 
 [[plugins]]
-repo='yetone/avante.nvim'
-rev = 'main'
-build = 'make'
-
-[[plugins]]
-repo='famiu/bufdelete.nvim'
+repo = 'famiu/bufdelete.nvim'

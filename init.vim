@@ -36,6 +36,7 @@ endif
 " }}}
 
 source ~/.config/nvim/rc/settings.rc.vim
+source ~/.config/nvim/plugins/fzf.rc.vim
 
 if has('vim_starting') && dein#check_install()
   call dein#install()

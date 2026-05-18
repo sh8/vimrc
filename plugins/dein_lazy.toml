@@ -17,8 +17,8 @@
 #
 # [[plugins]]
 # repo = 'kristijanhusak/defx-git'
-
+#
 # [plugins.ftplugin]
-# defx= '''
+# defx = '''
 #   source ~/.config/nvim/plugins/defx.rc.vim
 # '''
