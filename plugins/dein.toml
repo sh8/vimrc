@@ -35,7 +35,9 @@ hook_add = '''
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'master'
-build = 'yarn install --frozen-lockfile'
+# coc.nvim uses npm (ships package-lock.json, no yarn.lock). `npm ci` installs
+# from the lockfile and runs the `prepare` hook that builds build/index.js.
+build = 'npm ci'
 merged = false
 hook_add = """
   source ~/.config/nvim/plugins/coc.rc.vim
