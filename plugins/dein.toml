@@ -104,13 +104,12 @@ repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'rmagatti/auto-session'
-on_lua = 'auto-session'
+# Plugins land on the runtimepath at VimEnter, so requiring them from
+# hook_add directly fails during startup — defer with an autocmd.
 hook_add = '''
-lua <<END
-require('auto-session').setup({
-  enabled = true
-})
-END
+autocmd VimEnter * ++once lua require('auto-session').setup({
+      \   enabled = true
+      \ })
 '''
 
 [[plugins]]
@@ -123,21 +122,22 @@ map <silent> <C-\> :lua require("yazi").yazi()<CR>
 '''
 
 [[plugins]]
-repo = 'Shougo/echodoc.nvim'
+repo = 'Shougo/echodoc.vim'
 hook_add = '''
   let g:echodoc#enable_at_startup = 1
   let g:echodoc#type = 'virtual'
 '''
 
 [[plugins]]
+# rev pinned: the 'main' branch is a rewrite without the
+# nvim-treesitter.configs module this config uses.
 repo = 'nvim-treesitter/nvim-treesitter'
+rev = 'master'
 hook_add = '''
-lua <<END
-require('nvim-treesitter.configs').setup({
-  ensure_installed = { 'python' },
-  highlight = { enable = true },
-})
-END
+autocmd VimEnter * ++once lua require('nvim-treesitter.configs').setup({
+      \   ensure_installed = { 'python' },
+      \   highlight = { enable = true },
+      \ })
 '''
 
 [[plugins]]
@@ -145,9 +145,6 @@ repo = 'stevearc/dressing.nvim'
 
 [[plugins]]
 repo = 'MunifTanjim/nui.nvim'
-hook_add = '''
-  lua require('nui').load()
-'''
 
 [[plugins]]
 repo = 'MeanderingProgrammer/render-markdown.nvim'

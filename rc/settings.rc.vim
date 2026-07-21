@@ -77,13 +77,15 @@ augroup RuffOrganizeImports
 augroup END
 
 " Colorscheme
-colorscheme brogrammer
-
-lua <<EOF
-  require('render-markdown').setup({
-    file_types = { "markdown", "Avante" },
-  })
-EOF
+" dein only adds plugins to the runtimepath at VimEnter, so anything that
+" touches plugin code has to wait until then.
+augroup plugin_settings
+  autocmd!
+  autocmd VimEnter * ++nested colorscheme brogrammer
+  autocmd VimEnter * lua require('render-markdown').setup({
+        \   file_types = { "markdown", "Avante" },
+        \ })
+augroup END
 
 " }}}
 
