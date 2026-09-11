@@ -129,15 +129,14 @@ hook_add = '''
 '''
 
 [[plugins]]
-# rev pinned: the 'main' branch is a rewrite without the
-# nvim-treesitter.configs module this config uses.
+# Neovim 0.12 requires the main branch; master uses removed query APIs.
 repo = 'nvim-treesitter/nvim-treesitter'
-rev = 'master'
+rev = 'main'
+merged = false
+# Keep parsers and queries in sync when the plugin is updated.
+build = '''nvim --headless -u NONE -i NONE -c "set rtp^=." -c "lua assert(require('nvim-treesitter').update():wait(300000))" -c "qa"'''
 hook_add = '''
-autocmd VimEnter * ++once lua require('nvim-treesitter.configs').setup({
-      \   ensure_installed = { 'python' },
-      \   highlight = { enable = true },
-      \ })
+autocmd VimEnter * ++once luafile ~/.config/nvim/rc/treesitter.lua
 '''
 
 [[plugins]]
